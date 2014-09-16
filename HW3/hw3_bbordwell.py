@@ -38,8 +38,8 @@ p = x[0]  ;  C = np.exp(x[1])
 print('p = '+ str(p))
 print('C = '+ str(C))
 
-fit = np.dot(x,A)
-avg_abs_err = np.mean(np.abs(b - fit))
+fit = np.dot(x,A)  ;  res = (b-fit)**2
+avg_abs_err = np.sqrt(res.sum())/len(fit)
 print('Mean absolute error of fit is: '+str(avg_abs_err))
 
 
