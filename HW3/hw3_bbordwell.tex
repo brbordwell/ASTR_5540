@@ -1,4 +1,4 @@
-%
+e%
 %     hw3_bbordwell.tex
 %     Baylee Bordwell (baylee.bordwell@colorado.edu)
 %     Based on the template by Benjamin Brown (bpbrown@colorado.edu)
@@ -94,6 +94,9 @@ $\mathbf{x}=(A^TA)^{-1}A^T\mathbf{b}$ \\
 \end{array}
 \] 
 The value of $\mathbf{x}$ found above minimizes $(A\mathbf{x}-\mathbf{b})^T(A\mathbf{x}-\mathbf{b})$ because it is the solution to the equation $(A\mathbf{x}-\mathbf{b})=0$ and  $(A\mathbf{x}-\mathbf{b})^T(A\mathbf{x}-\mathbf{b})$ is effectively  ``$(A\mathbf{x}-\mathbf{b})^2$'', so with $\mathbf{x}$ as above $(A\mathbf{x}-\mathbf{b})^T(A\mathbf{x}-\mathbf{b})=0$, which is the minimum value for a real squared number.
+
+More properly, the solution of $\mathbf{x}$ for $A^TA\mathbf{x}=A^T\mathbf{b}$ minimizes the function $P = (A\mathbf{x}-\mathbf{b})^T(A\mathbf{x}-\mathbf{b})=
+|A\mathbf{x}|^2-\mathbf{b}^TA\mathbf{x}- A^T\mathbf{x}^T\mathbf{b}+|\mathbf{b}|^2$, which is effectively $P = A^2x^2-2Abx+b^2$ in non-vector notation because $\frac{dP}{dx} = 0$ when $P$ is minimized, and $\frac{dP}{dx} = 2A(Ax-b)$ which is $2A(A\mathbf(x)-\mathbf{b})$ in vector notation. The function is therefore minimized when x is the solution to $A\mathbf{x}=\mathbf{b}$, or $A^TA\mathbf{x}=A^T\mathbf{b}$.
 
 \item Solving for x yields: $p = 1.1492$, $C = 8.7255\cdot 10^{-1}$ \newline
 My $p$ does agree with Pevtsov et al. (2003).
